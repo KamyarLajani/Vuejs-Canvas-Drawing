@@ -9,4 +9,4 @@ This app used webpack, babel. Use [Vue-CLI](https://cli.vuejs.org/) to simply in
 ![alt text](https://i.ibb.co/nwP408z/drown.png)
 
 
-[Demo] on Codepen.io (https://codepen.io/KamyarLajani/pen/xxKZzXv)
+[Demo](https://codepen.io/KamyarLajani/pen/xxKZzXv)  on Codepen.io 
