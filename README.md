@@ -1,18 +1,6 @@
-# vue-app
+# Canvas and Vuejs drawing
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+This web app is a simple Canvas drawing using Vuejs.
+It has some features like Pen with sizes, Eraser/Cleaner with sizes, Reset all drown and downloading it as Image as PNG and JPG.
+This app used webpack, babel.
+Use Vue-CLI to simply install all.

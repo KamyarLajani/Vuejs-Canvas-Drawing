@@ -1,16 +1,16 @@
 <template>
     <div class="container">
         
-        <canvas width="700" height="500" ref="canvas" :class="{pen: pen, eraser: clean}" @mousedown="mouseDown()" @mouseup="mouseUp()" @mousemove="mouseMove($event)"></canvas>
+        <canvas width="700" height="500" ref="canvas" :class="{pen: pen, eraser: clean}" @mousedown="mouseDown($event)" @mouseup="mouseUp()" @mousemove="mouseMove($event)"></canvas>
         <div class="tools">
             <div>
-                <img @click="penSizeShow = !penSizeShow; pen = true; clean = false" src="/images/pencil.png" alt="Pen" title="Pen" />
+                <img @click="penSizeShow = !penSizeShow; pen = true; clean = false" src="images/pencil.png" alt="Pen" title="Pen" />
                 <div v-show="penSizeShow">
                     <input type="number" v-model="penSize" min="1" max="50"/>
                 </div>
             </div>
             <div>
-                <img @click="clean = !clean; penSizeShow = false, pen = false" src="/images/eraser.png" alt="eraser" title="Cleaner"/>
+                <img @click="clean = !clean; penSizeShow = false, pen = false" src="images/eraser.png" alt="eraser" title="Cleaner"/>
                 <div v-show="clean" title="Cleaner">
                     <input type="number" v-model="cleanSize" min="1" max="50"/>
                 </div>
@@ -60,7 +60,7 @@ export default {
             penSize: 5,
             clean: false,
             cleanSize: 20,
-            color: 'black',
+            color: '#000000',
             save: false,
             imageType: 'image/png',
             dataUrl: ''
@@ -69,7 +69,7 @@ export default {
     },
     methods: {
        
-        mouseDown: function() {
+        mouseDown: function(e) {
             this.mDown = true;
             ctx.beginPath();
             ctx.lineWidth = this.penSize;
@@ -110,7 +110,7 @@ export default {
         // canvas to Data URL (base64) then adding it in href of download button to be downloadable with base64
         saving: function(){
             this.dataUrl = canvas.toDataURL(this.imageType);
-            console.log(this.dataUrl);
+           
         }
     }
 }
